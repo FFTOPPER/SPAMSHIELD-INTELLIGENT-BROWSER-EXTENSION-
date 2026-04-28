@@ -12,10 +12,10 @@ It combines:
 
 This project helps users identify:
 
-✅ Safe Emails  
-⚠️ Suspicious Emails  
-🚨 Spam Emails  
-🎣 Phishing Emails  
+- Safe Emails  
+- Suspicious Emails  
+- Spam Emails  
+- Phishing Emails  
 
 ---
 
