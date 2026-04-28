@@ -1,4 +1,4 @@
-# 🛡️ SpamShield  
+# 🔐 SpamShield  
 ### AI-Powered Gmail Spam, Suspicious & Phishing Detection System
 
 SpamShield is a professional **Machine Learning + Browser Extension cybersecurity solution** that detects harmful emails directly inside Gmail in real time.
