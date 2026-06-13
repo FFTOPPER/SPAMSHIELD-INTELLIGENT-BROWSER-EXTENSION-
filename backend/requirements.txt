@@ -1,0 +1,12 @@
+SPAMSHIELD-INTELLIGENT-BROWSER-EXTENSION/
+│
+├── SpamShield_Extension/
+├── assets/
+├── backend/
+│   ├── app.py
+│   ├── spam_model.pkl
+│   ├── vectorizer.pkl
+│   └── requirements.txt   ← Create here
+│
+├── README.md
+└── SpamShield.ipynb
