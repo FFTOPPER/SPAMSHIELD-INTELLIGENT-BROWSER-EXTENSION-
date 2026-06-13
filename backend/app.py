@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
-import joblib
+import joblib 
 
 app = Flask(__name__)
 CORS(app)
