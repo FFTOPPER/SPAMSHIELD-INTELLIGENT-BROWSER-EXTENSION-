@@ -5,9 +5,17 @@ import joblib
 app = Flask(__name__)
 CORS(app)
 
-model = joblib.load("spam_model.pkl")
-vectorizer = joblib.load("vectorizer.pkl")
-
+#model = joblib.load("spam_model.pkl")
+#vectorizer = joblib.load("vectorizer.pkl")
+try:
+    model = joblib.load("spam_model.pkl")
+    vectorizer = joblib.load("vectorizer.pkl")
+    print("Model loaded successfully")
+except Exception as e:
+    print("Model loading failed:", e)
+    model = None
+    vectorizer = None
+    
 # Dashboard stats
 stats = {
     "total": 0,
@@ -135,8 +143,25 @@ def dashboard():
 @app.route("/predict", methods=["POST"])
 def predict():
 
+    # Model loading check
+    if model is None or vectorizer is None:
+        return jsonify({
+            "error": "Spam model not loaded on server"
+        }), 500
+
     data = request.get_json()
+
+    if not data:
+        return jsonify({
+            "error": "No JSON data received"
+        }), 400
+
     text = data.get("text", "").lower()
+
+    if not text:
+        return jsonify({
+            "error": "Text is required"
+        }), 400
 
     vec = vectorizer.transform([text])
     prob = model.predict_proba(vec)[0]
