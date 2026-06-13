@@ -152,106 +152,124 @@ MLT_PROJECT/
 
 ---
 
-#  Installation Guide
+## Installation Guide
 
-## 1️ Clone Repository
+### 1️⃣ Clone Repository
 
-git clone https://github.com/yourusername/SpamShield.git
+```bash
+git clone https://github.com/FFTOPPER/SPAMSHIELD-INTELLIGENT-BROWSER-EXTENSION-.git
 
-cd SpamShield
+cd SPAMSHIELD-INTELLIGENT-BROWSER-EXTENSION-
+```
 
-## 2️ Install Python Dependencies
+### 2️⃣ Install Python Dependencies
 
-pip install flask flask-cors scikit-learn joblib
+```bash
+pip install -r requirements.txt
+```
 
-## 3️ Run Backend Server
+### 3️⃣ Backend Deployment
 
-Go to backend folder:
+The backend API is already deployed on Render.
 
-cd backend
+API URL:
 
-python app.py
+```text
+https://spamshield-intelligent-browser-extension.onrender.com/
+```
 
-Server runs at:
+Prediction Endpoint:
 
-http://localhost:5000
+```text
+https://spamshield-intelligent-browser-extension.onrender.com/predict
+```
 
 Dashboard:
 
-http://localhost:5000/dashboard
+```text
+https://spamshield-intelligent-browser-extension.onrender.com/dashboard
+```
 
 ---
 
-#  Load Chrome Extension
+## Load Chrome Extension
 
-## Step 1
+### Step 1
 
 Open Chrome browser and go to:
 
+```text
 chrome://extensions/
+```
 
-## Step 2
+### Step 2
 
 Enable:
 
-Developer Mode
+**Developer Mode**
 
 (top-right corner)
 
-## Step 3
+### Step 3
 
 Click:
 
-Load Unpacked
+**Load Unpacked**
 
-## Step 4
+### Step 4
 
 Select folder:
 
+```text
 SpamShield_Extension
+```
 
-## Step 5
+### Step 5
 
-Extension installed successfully 
+Extension installed successfully.
 
 ---
 
-#  How to Use
+## How to Use
 
-## Step 1
+### Step 1
 
-Keep Flask backend running.
+Load the SpamShield extension in Chrome.
 
-## Step 2
+### Step 2
 
 Open Gmail:
 
+```text
 https://mail.google.com
+```
 
-## Step 3
+### Step 3
 
 Open any email.
 
-## Step 4
+### Step 4
 
-SpamShield automatically scans email content.
+SpamShield automatically scans the email content using the deployed AI backend.
 
-## Step 5
+### Step 5
 
-Result appears as top banner:
+A security banner appears at the top of Gmail:
 
-- ✅ Safe Email  
-- ⚠️ Suspicious Email  
-- 🚨 Spam Email  
-- 🎣 Phishing Alert  
+* ✅ Safe Email
+* ⚠️ Suspicious Email
+* 🚨 Spam Email
+* 🎣 Phishing Alert
 
 ---
 
-# 📊 Dashboard Monitoring
+## 📊 Dashboard Monitoring
 
 Visit:
 
-http://localhost:5000/dashboard
+```text
+https://spamshield-intelligent-browser-extension.onrender.com/dashboard
+```
 
 Tracks:
 
